@@ -1,15 +1,10 @@
 # 🌎 Emi Tours
 
-Emi Tours es una plataforma web de turismo enfocada en Medellín, Colombia. 
-El proyecto permite a los usuarios consultar información sobre diferentes 
-lugares turísticos, conocer los servicios disponibles y realizar reservas 
-de tours.
+Emi Tours es una plataforma web de turismo enfocada en Medellín, Colombia. El proyecto permite a los usuarios consultar información sobre diferentes lugares turísticos, conocer los servicios disponibles y realizar reservas de tours.
 
 ## 🎯 Objetivo del proyecto
 
-El objetivo de Emi Tours es facilitar a turistas y visitantes el acceso a 
-información sobre lugares turísticos de Medellín y permitir la gestión de 
-reservas de una manera sencilla desde una plataforma web.
+El objetivo de Emi Tours es facilitar a turistas y visitantes el acceso a información sobre lugares turísticos de Medellín y permitir la gestión de reservas de una manera sencilla desde una plataforma web.
 
 ## 👥 Público objetivo
 
@@ -48,13 +43,11 @@ Emi Tours está dirigido principalmente a:
 
 ### 🤖 Asistente virtual
 
-La plataforma cuenta con un asistente virtual que permite orientar 
-a los usuarios y brindar información relacionada con los tours.
+La plataforma cuenta con un asistente virtual que permite orientar a los usuarios y brindar información relacionada con los tours.
 
 ### 🔐 Panel administrativo
 
-El sistema cuenta con un panel administrativo para gestionar 
-diferentes elementos de la plataforma, entre ellos:
+El sistema cuenta con un panel administrativo para gestionar diferentes elementos de la plataforma, entre ellos:
 
 - Usuarios.
 - Lugares turísticos.
@@ -96,26 +89,21 @@ diferentes elementos de la plataforma, entre ellos:
 
 ## 🏗️ Arquitectura del proyecto
 
-Emi Tours utiliza una arquitectura dividida en frontend, backend y 
-base de datos.
+Emi Tours utiliza una arquitectura dividida en frontend, backend y base de datos.
 
-```text
-                    EMI TOURS
-                        │
-            ┌───────────┴───────────┐
-            │                       │
-        FRONTEND                 BACKEND
-        React + Vite           Node.js + Express
-            │                       │
-            │       API             │
-            └───────────┬───────────┘
-                        │
-                     MySQL
-                    Base de datos
+```mermaid
+flowchart LR
+    U[Usuario] --> F[Frontend<br>React + Vite]
 
-Ejecutar el frontend = npm run dev      
-Ejecutar el backend = node index.js      
+    F -->|Peticiones HTTP| B[Backend<br>Node.js + Express]
 
+    B --> D[(Base de datos<br>MySQL)]
+
+    B --> G[Google<br>Autenticación]
+
+    R[Railway] --> F
+    R --> B
+    R --> D
 Desarrolladoras:
 Helen Henao 
 Yulisa Henao
