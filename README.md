@@ -89,21 +89,23 @@ El sistema cuenta con un panel administrativo para gestionar diferentes elemento
 
 ## 🏗️ Arquitectura del proyecto
 
+## 🏗️ Arquitectura del proyecto
+
 Emi Tours utiliza una arquitectura dividida en frontend, backend y base de datos.
 
 ```mermaid
 flowchart LR
     U[Usuario] --> F[Frontend<br>React + Vite]
-
     F -->|Peticiones HTTP| B[Backend<br>Node.js + Express]
-
     B --> D[(Base de datos<br>MySQL)]
+```
 
-    B --> G[Google<br>Autenticación]
+### Ejecución local
 
-    R[Railway] --> F
-    R --> B
-    R --> D
-Desarrolladoras:
-Helen Henao 
-Yulisa Henao
+- **Frontend:** ejecutar `npm run dev` desde la carpeta del frontend.
+- **Backend:** ejecutar `node index.js` desde la carpeta del backend.
+
+### Desarrolladoras
+
+- Helen Henao
+- Yulisa Henao
